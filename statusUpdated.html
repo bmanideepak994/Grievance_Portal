@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyDKP18NkbSkqWwOC9sRT7CVDRFN5RG243Ug&s" type="image/icon type">
+    <title>Status Update Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(215, 243, 245);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 500px;
+        }
+        .container h1 {
+            color: #4CAF50;
+        }
+        .container p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .home-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .home-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Status Updated</h1>
+        <p>Complaint Number: <span id="complaintNumber"></span></p>
+        <p>New Status: <span id="status"></span></p>
+        <button class="home-button" onclick="window.location.href='index.html'">Back to Home</button>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const complaintNumber = urlParams.get('complaintNumber');
+        const status = urlParams.get('status');
+
+        document.getElementById('complaintNumber').textContent = complaintNumber;
+        document.getElementById('status').textContent = status;
+    </script>
+
+</body>
+</html>

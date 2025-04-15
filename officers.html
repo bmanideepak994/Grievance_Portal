@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyDKP18NkbSkqWwOC9sRT7CVDRFN5RG243Ug&s" type="image/icon type">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color:inherit;
+            min-height: 100vh;
+            position: relative;
+            background-image: url("https://assets.zeezest.com/blogs/PROD_Stupa%20Banner_1687628870038.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .home-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color:inherit;
+            border-radius: 7px;
+            width: 100px;
+            height: 30px;
+            backdrop-filter: blur(18px);
+            color:lightgrey;
+        }
+        .form-container {
+            background-color:inherit;
+            border-radius: 15px;
+            padding: 20px;
+            width:400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 100%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.4);
+            margin: 10px;
+            backdrop-filter: blur(7px);
+        }
+        .form-container h2 {
+            text-align: center;
+            width: 100%;
+        }
+        .form-container input {
+            margin: 10px;
+            padding: 10px;
+            width: 80%;
+            border-radius: 8px;
+            background-color:inherit;
+            border-color: lightgrey;
+            
+        }
+        ::placeholder {
+        color:lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <button class="home-button" type="button" onclick="window.location.href = 'index.html';">HOME</button>
+    <h1 style="text-align: center; color:lightgrey">Officer Login</h1>
+    
+    <div class="form-container">
+        <h2 style="text-align: center; color:lightgrey">Login to Update Status</h2>
+        <img src="Indian.png">
+        <form action="OfficerLoginServlet" method="post">
+            <input type="text" name="username" placeholder="Username" required><br>
+            <input style="color:lightgrey" type="password" name="password" placeholder="Password" required><br>
+           <input style="color:lightgrey" type="submit" value="Login">
+			<p style="color:lightgrey">Don't have an account? <a style="color:red" href="signup.html">Signup Here</a></p>
+        </form>
+    </div>
+</body>
+</html>

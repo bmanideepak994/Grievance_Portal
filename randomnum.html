@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyDKP18NkbSkqWwOC9sRT7CVDRFN5RG243Ug&s" type="image/icon type">
+    <title>Complaint Confirmation</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #d0f0f3, #f7fbfc);
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            padding: 8px 15px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #45a049;
+        }
+
+        h1, h2 {
+            margin: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2e7d32;
+        }
+
+        h2 {
+            color: #388e3c;
+        }
+
+        #randomNumber {
+            font-size: 2em;
+            font-weight: bold;
+            color: #d32f2f;
+            margin-bottom: 20px;
+        }
+
+        .out {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px 30px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            max-width: 500px;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .out h1 {
+            margin-bottom: 15px;
+            color: #1a237e;
+        }
+
+        .out p {
+            font-size: 1.05em;
+            color: #333;
+            margin: 0;
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        @media (max-width: 600px) {
+            .home-button {
+                top: 10px;
+                right: 10px;
+                padding: 6px 12px;
+                font-size: 0.9em;
+            }
+
+            .out {
+                padding: 20px;
+            }
+
+            #randomNumber {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+    <script>
+        function getRandomNumberFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const randomNumber = urlParams.get('number');
+            const name = urlParams.get('name');
+            const designation = urlParams.get('designation');
+            const district = urlParams.get('district');
+            const mandal = urlParams.get('mandal');
+            const complaint = urlParams.get('complaint');
+
+            document.getElementById("randomNumber").innerText = randomNumber || "No number found";
+            document.getElementById('displayNumber').textContent = "Complaint Number: " + (randomNumber || "Not Available");
+            document.getElementById('displayName').textContent = "Name: " + name;
+            document.getElementById('displayDesignation').textContent = "Designation: " + designation;
+            document.getElementById('displayDistrict').textContent = "District: " + district;
+            document.getElementById('displayMandal').textContent = "Mandal: " + mandal;
+            document.getElementById('displayComplaint').textContent = "Complaint: " + complaint;
+        }
+    </script>
+</head>
+<body onload="getRandomNumberFromUrl()">
+    <button class="home-button" onclick="window.location.href = 'index.html';">HOME</button>
+
+    <h1>Your complaint has been successfully submitted!</h1>
+    <h2>Your Complaint Number is:</h2>
+    <div id="randomNumber"></div>
+
+    <div class="out">
+        <h1>Complaint Details</h1>
+        <p id="displayNumber"></p>
+        <p id="displayName"></p>
+        <p id="displayDesignation"></p>
+        <p id="displayDistrict"></p>
+        <p id="displayMandal"></p>
+        <p id="displayComplaint"></p>
+    </div>
+</body>
+</html>

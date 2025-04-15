@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Officer Signup</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyDKP18NkbSkqWwOC9sRT7CVDRFN5RG243Ug&s" type="image/icon type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color:inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-image: url("https://assets-news.housing.com/news/wp-content/uploads/2022/09/19072700/RAJAMUNDRY-FEATURE-compressed.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .form-container {
+            background-color:inherit;
+            backdrop-filter: blur(7px);
+            border-radius: 15px;
+            padding: 30px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.4);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 6px;
+            box-sizing: border-box;
+            background-color:seashell;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1c5980;
+        }
+
+        .back-link {
+            margin-top: 15px;
+            text-align: center;
+            color: white;
+        }
+
+        .back-link a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Officer Signup</h2>
+        <form action="OfficerSignupServlet" method="post">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="text" name="designation" placeholder="Designation" required>
+            <input type="text" name="userid" placeholder="User ID" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Signup">
+        </form>
+        <div class="back-link">
+            Already have an account? <a href="officers.html">Login here</a>
+        </div>
+    </div>
+
+</body>
+</html>

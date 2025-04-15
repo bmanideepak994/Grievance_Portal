@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPLAINT</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyDKP18NkbSkqWwOC9sRT7CVDRFN5RG243Ug&s" type="image/icon type">
+    <style>
+        body {
+            background-image: url("https://media2.thrillophilia.com/images/photos/000/196/917/original/1584598247_shutterstock_286582049.jpg?w=753&h=450&dpr=1.5");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 80px;
+            border-radius: 15px;
+            padding: 30px 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 90%;
+        }
+
+        h2 {
+            color: #0f5132;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        form p {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: black;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.4);
+            font-size: 16px;
+            transition: box-shadow 0.3s ease;
+            background-color:gainsboro;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus {
+            outline: none;
+            box-shadow: 0 0 12px rgba(0, 140, 255, 0.3);
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        button {
+            width: 120px;
+            height: 40px;
+            border-radius: 10px;
+            margin: 10px;
+            background-color: #00bfff;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #009acd;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Details of the Officer</h2>
+        <form method="POST" action="ComplaintServlet">
+            <p>
+                <label>Name <span style="color:red">*</span>:</label>
+                <input type="text" name="name" required>
+            </p>
+            <p>
+                <label>Designation <span style="color:red">*</span>:</label>
+                <input type="text" name="designation" required>
+            </p>
+            <p>
+                <label>District <span style="color:red">*</span>:</label>
+                <input type="text" name="district" required>
+            </p>
+            <p>
+                <label>Mandal <span style="color:red">*</span>:</label>
+                <input type="text" name="mandal" required>
+            </p>
+            <p>
+                <label>Complaint <span style="color:red">*</span>:</label>
+                <textarea name="complaint" rows="6" required></textarea>
+            </p>
+            <div class="buttons">
+                <button type="submit">SUBMIT</button>
+                <button type="button" onclick="location.href='index.html'">HOME</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

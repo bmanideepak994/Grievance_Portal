@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<servlet>
+    <servlet-name>ComplaintServlet</servlet-name>
+    <servlet-class>com.grievance.ComplaintServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ComplaintServlet</servlet-name>
+    <url-pattern>/ComplaintServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>StatusUpdatedServlet</servlet-name>
+    <servlet-class>com.grievance.StatusUpdatedServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>StatusUpdatedServlet</servlet-name>
+    <url-pattern>/statusUpdated.html</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>TrackComplaintServlet</servlet-name>
+    <servlet-class>com.grievance.TrackComplaintServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>TrackComplaintServlet</servlet-name>
+    <url-pattern>/TrackComplaintServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>OfficerSignupServlet</servlet-name>
+    <servlet-class>com.grievance.OfficerSignupServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>OfficerSignupServlet</servlet-name>
+    <url-pattern>/OfficerSignupServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>OfficerLoginServlet</servlet-name>
+    <servlet-class>com.grievance.OfficerLoginServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>OfficerLoginServlet</servlet-name>
+    <url-pattern>/OfficerLoginServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ViewComplaintsServlet</servlet-name>
+    <servlet-class>com.grievance.ViewComplaintsServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ViewComplaintsServlet</servlet-name>
+    <url-pattern>/ViewComplaintsServlet</url-pattern>
+</servlet-mapping>
+	
+</web-app>
